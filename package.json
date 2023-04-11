@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsup src/index.ts --format cjs,esm --dts"
+    "dev": "vitest",
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "lint": "tsc"
   },
   "keywords": [],
   "author": "Shaheen Karodia",
@@ -13,6 +16,10 @@
   "devDependencies": {
     "@types/node": "^18.14.0",
     "tsup": "^6.7.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vitest": "^0.30.1"
+  },
+  "volta": {
+    "node": "19.9.0"
   }
 }
