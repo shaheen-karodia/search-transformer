@@ -1,5 +1,11 @@
 # @shaheen-karodia/zod-message-bus
 
+## 0.0.3
+
+### Patch Changes
+
+- 1c0ed0a: another one
+
 ## 0.0.2
 
 ### Patch Changes
