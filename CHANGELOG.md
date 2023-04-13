@@ -1,5 +1,11 @@
 # @shaheen-karodia/zod-message-bus
 
+## 0.0.4
+
+### Patch Changes
+
+- 8751c16: replaced dist directory
+
 ## 0.0.3
 
 ### Patch Changes
