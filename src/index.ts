@@ -1,3 +1,2 @@
-export const hello = () => {
-  console.log("hello there");
-};
+export * from "./types";
+export * from "./linkResolver";
