@@ -1,5 +1,11 @@
 # @shaheen-karodia/zod-message-bus
 
+## 0.0.5
+
+### Patch Changes
+
+- 69e84f8: Implemented GeneralLink Resolver
+
 ## 0.0.4
 
 ### Patch Changes
