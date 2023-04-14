@@ -20,13 +20,12 @@ export function resolveGeneralLink(
       return { path: generalLink.path, target: "_self" };
 
     case "ProductListPage": {
-      // TODO turned vanities off for illusrtative purposes
-      // if (generalLink.vanityUrl) {
-      //   return {
-      //     path: generalLink.vanityUrl,
-      //     target: '_self',
-      //   } //
-      // }
+      if (generalLink.vanityUrl) {
+        return {
+          path: generalLink.vanityUrl,
+          target: "_self",
+        };
+      }
 
       const path =
         buildPDPFilterPath(generalLink.filters) +
