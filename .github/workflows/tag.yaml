@@ -1,0 +1,29 @@
+name: Tag
+
+on:
+  create:
+    tags:
+      - "*"
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Run bash script
+        run: bash script.sh
+      - name: Modify changelog.md file
+        run: |
+          sed -i 's/old-text/new-text/g' changelog.md
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: Update changelog.md
+          commit-message: Update changelog.md
+          body: |
+            This PR updates the changelog.md file.
+          branch: update-changelog
+          token: ${{ secrets.GITHUB_TOKEN }}
