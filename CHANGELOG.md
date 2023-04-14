@@ -1,5 +1,11 @@
 # @shaheen-karodia/zod-message-bus
 
+## 0.0.6
+
+### Patch Changes
+
+- 886cbdd: added back vanity urls
+
 ## 0.0.5
 
 ### Patch Changes
