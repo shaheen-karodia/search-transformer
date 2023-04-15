@@ -25,5 +25,6 @@ jobs:
           commit-message: Update CHANGELOG.md
           body: |
             This PR updates the CHANGELOG.md file.
+          base: main
           branch: update-CHANGELOG
           token: ${{ secrets.GITHUB_TOKEN }}
