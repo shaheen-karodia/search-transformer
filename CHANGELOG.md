@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- 886cbdd: added back vanity urls
+- 886cbdd: added back vanity urlsold-text
 
 ## 0.0.5
 
@@ -16,13 +16,13 @@
 
 ### Patch Changes
 
-- 8751c16: replaced dist directory
+- 8751c16: replaced dist directoryold-text
 
 ## 0.0.3
 
 ### Patch Changes
 
-- 1c0ed0a: another one
+- 1c0ed0a:old-text another one
 
 ## 0.0.2
 

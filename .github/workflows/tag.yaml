@@ -15,15 +15,15 @@ jobs:
           ref: ${{ github.ref }}
       - name: Run bash script
         run: bash script.sh
-      - name: Modify changelog.md file
+      - name: Modify CHANGELOG.md file
         run: |
-          sed -i 's/old-text/new-text/g' changelog.md
+          sed -i 's/old-text/new-text/g' CHANGELOG.md
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          title: Update changelog.md
-          commit-message: Update changelog.md
+          title: Update CHANGELOG.md
+          commit-message: Update CHANGELOG.md
           body: |
-            This PR updates the changelog.md file.
-          branch: update-changelog
+            This PR updates the CHANGELOG.md file.
+          branch: update-CHANGELOG
           token: ${{ secrets.GITHUB_TOKEN }}
