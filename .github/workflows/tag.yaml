@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: Run bash script
-        run: bash script.sh
+      #- name: Run bash script
+      #  run: bash script.sh
       - name: Modify CHANGELOG.md file
         run: |
           sed -i 's/old-text/new-text/g' CHANGELOG.md
