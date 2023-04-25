@@ -22,6 +22,6 @@ jobs:
           commit-message: Staging Environment Ready
           body: |
             This PR modifies all files for staging environment
-          base: staging-env
-          branch: update-CHANGELOG
+          base: staging-env-target
+          branch: staging-env-source
           token: ${{ secrets.GITHUB_TOKEN }}
