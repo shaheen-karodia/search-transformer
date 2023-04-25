@@ -12,7 +12,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Modify CHANGELOG.md file
-        run: ./staging_deployerg.sh
+        run: ./staging_deployer.sh
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
