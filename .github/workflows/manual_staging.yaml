@@ -14,7 +14,7 @@ jobs:
       - name: Reset staging-env branch to master
         run: |
           git checkout master
-          git branch -D staging-env
+         # git branch -D staging-env
           git checkout -b staging-env-source || true
       - name: Set executable permission on staging_deployer.sh
         run: chmod +x staging_deployer.sh
