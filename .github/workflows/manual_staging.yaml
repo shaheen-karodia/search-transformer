@@ -1,4 +1,4 @@
-name: Manual Staging Workflow
+name: Manual Workflow
 
 on:
   workflow_dispatch:
@@ -14,15 +14,14 @@ jobs:
       #- name: Run bash script
       #  run: bash script.sh
       - name: Modify CHANGELOG.md file
-        run: |
-          sed -i 's/old-text/new-text/g' CHANGELOG.md
+        run: ./update-changelog.sh
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          title: Update CHANGELOG.md
-          commit-message: Update CHANGELOG.md
+          title: Staging Environment Ready
+          commit-message: Staging Environment Ready
           body: |
-            This PR updates the CHANGELOG.md file.
+            This PR modifies all files for staging environment
           base: staging-env
           branch: update-CHANGELOG
           token: ${{ secrets.GITHUB_TOKEN }}
