@@ -11,7 +11,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: Modify CHANGELOG.md file
+      - name: Set executable permission on staging_deployer.sh
+        run: chmod +x staging_deployer.sh
+      - name: Run staging_deployer.sh
         run: ./staging_deployer.sh
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
