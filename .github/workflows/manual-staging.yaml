@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete branch staging env
-          uses: ad-m/delete-branch@v2
-          with:
-            branch: 'staging-env'
-            token: ${{ secrets.GITHUB_TOKEN }}
+        uses: ad-m/delete-branch@v2
+        with:
+          branch: "staging-env"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout master
         uses: actions/checkout@v2
         with:
