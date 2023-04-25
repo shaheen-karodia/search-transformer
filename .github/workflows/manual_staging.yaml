@@ -18,7 +18,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: Reset staging-env branch to master
         run: |
-          git checkout -b staging-env || true
+          git checkout -b staging-env
       - name: Set executable permission on staging_deployer.sh
         run: chmod +x staging_deployer.sh
       - name: Run staging_deployer.sh
