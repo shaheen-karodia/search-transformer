@@ -7,15 +7,18 @@ jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Delete branch staging env
+          uses: ad-m/delete-branch@v2
+          with:
+            branch: 'staging-env'
+            token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout master
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
       - name: Reset staging-env branch to master
         run: |
-          git checkout master
-          git branch -D staging-env
-          git checkout -b staging-env-source || true
+          git checkout -b staging-env || true
       - name: Set executable permission on staging_deployer.sh
         run: chmod +x staging_deployer.sh
       - name: Run staging_deployer.sh
